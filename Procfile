@@ -1,0 +1,1 @@
+web: gunicorn -w 2 --threads 8 --timeout 600 --keep-alive 30 --worker-class gthread --max-requests 500 --max-requests-jitter 50 --graceful-timeout 60 -b 0.0.0.0:$PORT crackpro:app
